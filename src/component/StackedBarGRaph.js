@@ -10,18 +10,14 @@ import {
 } from "recharts";
 import { GoPrimitiveDot } from "react-icons/go";
 import chart from "../assets/Vector.svg";
-export default function StackedBarGRaph({ data, setHover, hover }) {
+export default function StackedBarGRaph({
+  data,
+  setHover,
+  hover,
+  selectedTitle,
+}) {
   data = data.data;
-  console.log(data, "000");
-  // const data = [
-  //   { name: "A", x: 30, y: 60, z: 50 },
-  //   { name: "B", x: 12, y: 79, z: 9 },
-  //   { name: "C", x: 15, y: 80, z: 5 },
-  //   { name: "D", x: 31, y: 65, z: 4 },
-  //   { name: "E", x: 51, y: 46, z: 3 },
-  //   { name: "F", x: 52, y: 28, z: 20 },
-  //   { name: "G", x: 32, y: 68, z: 0 },
-  // ];
+  // console.log(data, "000");
 
   return (
     <div
@@ -49,8 +45,7 @@ export default function StackedBarGRaph({ data, setHover, hover }) {
             marginBottom: "5vh",
           }}
         >
-          {" "}
-          Carbon FootPrint
+          {selectedTitle}
         </div>
         <div style={{ display: "flex" }}>
           <GoPrimitiveDot style={{ color: "#57CC78", alignSelf: "center" }} />

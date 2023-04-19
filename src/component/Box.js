@@ -1,8 +1,13 @@
 import React from "react";
 import Stylesheet from "reactjs-stylesheet";
-export default function ({ data }) {
+export default function ({ data, setSelectedTitle }) {
   return (
-    <div style={styles.container}>
+    <div
+      style={styles.container}
+      onClick={(e) => {
+        setSelectedTitle(data.title);
+      }}
+    >
       <div style={{ fontWeight: 600, fontSize: "x-small", color: "#808588" }}>
         {data.title}
       </div>
@@ -45,5 +50,6 @@ const styles = Stylesheet.create({
     rowGap: window.innerHeight * 0.003,
     display: "flex",
     flexDirection: "column",
+    cursor: "pointer",
   },
 });

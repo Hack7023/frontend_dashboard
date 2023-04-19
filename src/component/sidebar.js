@@ -48,7 +48,7 @@ export default function Sidebar() {
           <IoIosArrowDown
             style={{
               alignSelf: "center",
-              fontSize: "14px",
+              fontSize: "3vh",
               marginRight: "4vh",
             }}
           />
@@ -56,7 +56,7 @@ export default function Sidebar() {
           <IoIosArrowUp
             style={{
               alignSelf: "center",
-              fontSize: "14px",
+              fontSize: "3vh",
               marginRight: "4vh",
             }}
           />

@@ -6,6 +6,8 @@ import StackedBarGRaph from "../component/StackedBarGRaph";
 import Piecharts from "../component/Piecharts";
 //flow chart
 export default function Main({ data }) {
+  const [selectedTitle, setSelectedTitle] = useState("Carbon FootPrint");
+
   const [hover, setHover] = useState([
     { name: "Spinning", students: 400, color: "red" },
     { name: "Transportation", students: 700, color: "yellow" },
@@ -35,10 +37,11 @@ export default function Main({ data }) {
         >
           {items.map((item) => (
             <div>
-              <Box data={item} />
+              <Box data={item} setSelectedTitle={setSelectedTitle} />
             </div>
           ))}
         </div>
+
         <div
           style={{
             display: "flex",
@@ -51,6 +54,7 @@ export default function Main({ data }) {
               data={data}
               setHover={setHover}
               hover={hover}
+              selectedTitle={selectedTitle}
               style={{ width: window.innerWidth * 0.5 }}
             />
           </div>
