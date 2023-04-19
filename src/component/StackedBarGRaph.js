@@ -85,10 +85,18 @@ export default function StackedBarGRaph({
           let res = e.activePayload[0].payload;
           // console.log(res.name, "res");
           setHover([
-            { name: "Spinning", students: res.x, color: "red" },
-            { name: "Transportation", students: res.y, color: "yellow" },
-            { name: "Carding", students: res.z, color: "yellow" },
-            { name: "Heating and Cooling", students: res.p, color: "yellow" },
+            { name: "Spinning", students: res.Spinning, color: "red" },
+            {
+              name: "Transportation",
+              students: res.Transportation,
+              color: "yellow",
+            },
+            { name: "Carding", students: res.Carding, color: "yellow" },
+            {
+              name: "Heating and Cooling",
+              students: res["Heating and Cooling"],
+              color: "yellow",
+            },
           ]);
         }}
         // setData(temp);}setHover(e.activePayload)}
@@ -97,10 +105,15 @@ export default function StackedBarGRaph({
         <YAxis />
         <Tooltip />
 
-        <Bar dataKey="x" stackId="a" fill="#57CC78" />
-        <Bar dataKey="y" stackId="a" fill="#55DBDB" />
-        <Bar dataKey="z" stackId="a" fill="#E2FF32" radiusTop={10} />
-        <Bar dataKey="p" stackId="a" fill="#FEC102" radiusTop={10} />
+        <Bar dataKey="Spinning" stackId="a" fill="#57CC78" />
+        <Bar dataKey="Transportation" stackId="a" fill="#55DBDB" />
+        <Bar dataKey="Carding" stackId="a" fill="#E2FF32" radiusTop={10} />
+        <Bar
+          dataKey="Heating and Cooling"
+          stackId="a"
+          fill="#FEC102"
+          radiusTop={10}
+        />
       </BarChart>
     </div>
   );

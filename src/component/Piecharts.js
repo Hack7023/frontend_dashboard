@@ -26,6 +26,7 @@ export default function Piecharts({ hover }) {
         paddingBottom: 20,
         height: window.innerHeight * 0.6,
         borderRadius: 10,
+        minHeight: "200px",
       }}
     >
       <div
@@ -33,8 +34,8 @@ export default function Piecharts({ hover }) {
           alignSelf: "center",
           fontWeight: "bold",
           fontSize: "22px",
-          margin: "2vh",
-          marginBottom: "5vh",
+          marginLeft: 4,
+          marginBottom: 2,
         }}
       >
         Top emission by type

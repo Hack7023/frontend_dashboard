@@ -6,7 +6,7 @@ export default function App() {
 
   //choose the screen size
   const handleResize = () => {
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 1196) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -18,13 +18,55 @@ export default function App() {
     window.addEventListener("resize", handleResize);
   });
   const [data, setData] = useState([
-    { name: "A", x: 30, y: 60, z: 50, p: 10 },
-    { name: "B", x: 12, y: 79, z: 9, p: 10 },
-    { name: "C", x: 15, y: 80, z: 5, p: 10 },
-    { name: "D", x: 31, y: 65, z: 4, p: 10 },
-    { name: "E", x: 51, y: 46, z: 3, p: 10 },
-    { name: "F", x: 52, y: 28, z: 20, p: 10 },
-    { name: "G", x: 32, y: 68, z: 0, p: 10 },
+    {
+      name: "A",
+      Spinning: 30,
+      Transportation: 60,
+      Carding: 50,
+      "Heating and Cooling": 10,
+    },
+    {
+      name: "B",
+      Spinning: 12,
+      Transportation: 79,
+      Carding: 9,
+      "Heating and Cooling": 10,
+    },
+    {
+      name: "C",
+      Spinning: 15,
+      Transportation: 80,
+      Carding: 5,
+      "Heating and Cooling": 10,
+    },
+    {
+      name: "D",
+      Spinning: 31,
+      Transportation: 65,
+      Carding: 4,
+      "Heating and Cooling": 10,
+    },
+    {
+      name: "E",
+      Spinning: 51,
+      Transportation: 46,
+      Carding: 3,
+      "Heating and Cooling": 10,
+    },
+    {
+      name: "F",
+      Spinning: 52,
+      Transportation: 28,
+      Carding: 20,
+      "Heating and Cooling": 10,
+    },
+    {
+      name: "G",
+      Spinning: 32,
+      Transportation: 68,
+      Carding: 0,
+      "Heating and Cooling": 10,
+    },
   ]);
   // https://rumbling-maroon-kayak.glitch.me/in/sampledata
   useEffect(() => {
@@ -47,10 +89,10 @@ export default function App() {
         let temp = res.map((item) => {
           return {
             name: item["month"],
-            x: item["spinning"],
-            y: item["transportation"],
-            z: item["carding"],
-            p: item["heatingandcooling"],
+            Spinning: item["spinning"],
+            Transportation: item["transportation"],
+            Carding: item["carding"],
+            "Heating and Cooling": item["heatingandcooling"],
           };
         });
         setData(temp);
