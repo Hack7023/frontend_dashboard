@@ -28,6 +28,17 @@ export default function Piecharts({ hover }) {
         borderRadius: 10,
       }}
     >
+      <div
+        style={{
+          alignSelf: "center",
+          fontWeight: "bold",
+          fontSize: "22px",
+          margin: "2vh",
+          marginBottom: "5vh",
+        }}
+      >
+        Top emission by type
+      </div>
       <PieChart
         width={window.innerWidth * 0.2}
         height={window.innerHeight * 0.3}
@@ -45,28 +56,35 @@ export default function Piecharts({ hover }) {
       </PieChart>
       <div
         style={{
-          display: "flex",
+          display: "grid",
+          gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
+          rowGap: 5,
           alignContent: "center",
           flexDirection: "column",
           marginTop: 50,
+          padding: 10,
         }}
       >
         <div>
           <GoPrimitiveDot style={{ color: "#57CC78", alignSelf: "center" }} />
-          Spinning{"   " + x}%
         </div>
+        <div style={{ gridColumn: "span 3 / span 3" }}>Spinning</div>
+        <div>{x}%</div>
         <div>
           <GoPrimitiveDot style={{ color: "#55DBDB", alignSelf: "center" }} />
-          Transportation{"   " + y}%
         </div>
+        <div style={{ gridColumn: "span 3 / span 3" }}>Transportation</div>
+        <div>{y}%</div>
         <div>
           <GoPrimitiveDot style={{ color: "#E2FF32", alignSelf: "center" }} />
-          Carding{"   " + z}%
         </div>
+        <div style={{ gridColumn: "span 3 / span 3" }}>Carding</div>
+        <div>{z}%</div>
         <div>
           <GoPrimitiveDot style={{ color: "#FEC102", alignSelf: "center" }} />
-          Heating and Cooling{"   " + p}%
         </div>
+        <div style={{ gridColumn: "span 3 / span 3" }}>Heating and Cooling</div>
+        <div>{p}%</div>
       </div>
     </div>
   );

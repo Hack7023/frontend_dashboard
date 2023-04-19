@@ -40,6 +40,7 @@ const styles = Stylesheet.create({
   container: {
     backgroundColor: "#FFFFFF",
     maxHeight: "184px",
+    minHeight: "100px",
     // maxWidth: "262px",
     boxShadow: "0px 1px 10px rgba(0, 0, 0, 0.06)",
     borderRadius: "12px",

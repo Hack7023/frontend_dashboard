@@ -26,6 +26,7 @@ export default function StackedBarGRaph({
         padding: 20,
         height: window.innerHeight * 0.6,
         borderRadius: 10,
+        minHeight: "200px",
       }}
     >
       <div

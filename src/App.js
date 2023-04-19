@@ -1,6 +1,22 @@
 import LandingPage from "./pages/index";
 import React, { useEffect, useState } from "react";
+
 export default function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  //choose the screen size
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // create an event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
   const [data, setData] = useState([
     { name: "A", x: 30, y: 60, z: 50, p: 10 },
     { name: "B", x: 12, y: 79, z: 9, p: 10 },
@@ -43,7 +59,13 @@ export default function App() {
   }, []);
   return (
     <div>
-      <LandingPage data={data} />
+      {isMobile ? (
+        alert(
+          "This website is only for desktop/laptop screen please contact developer(vishal702355@gmail.com) with mobile figma for changes"
+        )
+      ) : (
+        <LandingPage data={data} />
+      )}
     </div>
   );
 }

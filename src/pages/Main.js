@@ -19,6 +19,7 @@ export default function Main({ data }) {
       style={{
         backgroundColor: "#F5F5F5",
         height: "100%",
+        minHeight: "200px",
         flexDirection: "row",
         display: "flex",
         position: "relative",
@@ -46,7 +47,7 @@ export default function Main({ data }) {
           style={{
             display: "flex",
             justifyContent: "space-around",
-            rowGap: 100,
+            rowGap: 50,
           }}
         >
           <div>
@@ -58,7 +59,7 @@ export default function Main({ data }) {
               style={{ width: window.innerWidth * 0.5 }}
             />
           </div>
-          <div style={{ marginLeft: window.innerWidth * 0.07 }}>
+          <div style={{ marginLeft: window.innerWidth * 0.04 }}>
             <Piecharts
               style={{ width: window.innerWidth * 0.264 }}
               hover={hover}
